@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sondy Sam Salon Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" data-page="home" aria-label="Sondy Sam home">
+      <span class="brand-mark">SS</span>
+      <span><strong>Sondy Sam</strong><small>HAIR SALON</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Main navigation">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="services">Services</button>
+      <button class="nav-link" data-page="booking">Book Appointment</button>
+      <button class="nav-link" data-page="admin">Admin Demo</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">YOUR STYLE, OUR PASSION</span>
+          <h1>A little care.<br><em>A lot of confidence.</em></h1>
+          <p>Refresh your look with thoughtful care and professional salon services at Sondy Sam Hair Salon.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" data-page="services">Explore Services <span>→</span></button>
+            <button class="btn btn-light" data-page="booking">Book an Appointment</button>
+          </div>
+          <div class="hero-note"><span class="status-dot"></span> A more convenient way to plan your salon visit</div>
+        </div>
+        <div class="hero-image" role="img" aria-label="Hair stylist caring for a client's hair">
+          <div class="image-caption"><span>YOUR SELF-CARE MOMENT</span><strong>Feel like your best self.</strong></div>
+        </div>
+      </div>
+      <div class="section-wrap">
+        <div class="section-heading">
+          <div><span class="eyebrow">THE SALON EXPERIENCE</span><h2>Care that starts with you</h2></div>
+          <button class="text-link" data-page="services">View all services ↗</button>
+        </div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon">✂</div><h3>Haircut & Styling</h3><p>A fresh cut shaped around your style.</p><span>From ₱150</span></article>
+          <article class="service-card"><div class="service-icon">✦</div><h3>Hair Coloring</h3><p>Add a little color or try a new look.</p><span>From ₱500</span></article>
+          <article class="service-card"><div class="service-icon">♡</div><h3>Hair Treatment</h3><p>Give your hair extra care and softness.</p><span>From ₱350</span></article>
+        </div>
+      </div>
+      <footer class="site-footer"><span>© 2026 Sondy Sam Hair Salon</span><span>Beautiful hair, thoughtful care.</span></footer>
+    </section>
+
+    <section class="page" id="page-services">
+      <div class="page-banner"><span class="eyebrow">FIND YOUR NEXT LOOK</span><h1>Salon services</h1><p>Choose a service to start planning your visit.</p></div>
+      <div class="section-wrap">
+        <div class="service-grid full-services">
+          <article class="service-card service-select"><div class="service-icon">✂</div><h3>Haircut & Styling</h3><p>Wash, haircut, and simple styling.</p><div class="service-bottom"><strong>₱150</strong><button class="btn btn-small btn-primary choose-service" data-service="Haircut & Styling">Choose service</button></div></article>
+          <article class="service-card service-select"><div class="service-icon">✦</div><h3>Hair Coloring</h3><p>Color service consultation and application.</p><div class="service-bottom"><strong>₱500</strong><button class="btn btn-small btn-primary choose-service" data-service="Hair Coloring">Choose service</button></div></article>
+          <article class="service-card service-select"><div class="service-icon">♡</div><h3>Hair Treatment</h3><p>Conditioning care to help hair feel smooth.</p><div class="service-bottom"><strong>₱350</strong><button class="btn btn-small btn-primary choose-service" data-service="Hair Treatment">Choose service</button></div></article>
+          <article class="service-card service-select"><div class="service-icon">◉</div><h3>Hair Rebond</h3><p>A straightening service, subject to consultation.</p><div class="service-bottom"><strong>₱1,200</strong><button class="btn btn-small btn-primary choose-service" data-service="Hair Rebond">Choose service</button></div></article>
+          <article class="service-card service-select"><div class="service-icon">✧</div><h3>Blow Dry</h3><p>Finishing and styling for a polished look.</p><div class="service-bottom"><strong>₱200</strong><button class="btn btn-small btn-primary choose-service" data-service="Blow Dry">Choose service</button></div></article>
+          <article class="service-card service-select"><div class="service-icon">❋</div><h3>Hair Spa</h3><p>A relaxing wash and nourishing hair care.</p><div class="service-bottom"><strong>₱450</strong><button class="btn btn-small btn-primary choose-service" data-service="Hair Spa">Choose service</button></div></article>
+        </div>
+        <div class="notice">Prices shown are sample prototype prices. Confirm actual service prices and availability with the salon.</div>
+      </div>
+    </section>
+
+    <section class="page" id="page-booking">
+      <div class="page-banner"><span class="eyebrow">LET'S GET YOU BOOKED</span><h1>Book an appointment</h1><p>Choose your service and preferred schedule in a few simple steps.</p></div>
+      <div class="booking-layout section-wrap">
+        <div class="booking-main">
+          <div class="stepper" aria-label="Booking steps"><span class="step active" data-step-indicator="1"><b>1</b> Schedule</span><i></i><span class="step" data-step-indicator="2"><b>2</b> Your details</span><i></i><span class="step" data-step-indicator="3"><b>3</b> Review</span></div>
+          <form id="bookingForm" novalidate>
+            <div class="booking-step active" data-step="1">
+              <h2>Choose your service</h2><p class="muted">Select a service and the date and time that work for you.</p>
+              <label for="service">Salon service <span class="required">*</span></label>
+              <select id="service" required>
+                <option value="">Select a service</option>
+                <option>Haircut & Styling</option><option>Hair Coloring</option><option>Hair Treatment</option><option>Hair Rebond</option><option>Blow Dry</option><option>Hair Spa</option>
+              </select>
+              <div class="form-row"><div><label for="date">Preferred date <span class="required">*</span></label><input id="date" type="date" required /></div><div><label for="time">Available time <span class="required">*</span></label><select id="time" required><option value="">Choose a time</option><option>9:00 AM</option><option>10:00 AM</option><option>11:00 AM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option></select></div></div>
+              <div class="inline-tip">ⓘ Time slots are sample options for this prototype. Confirm actual availability with the salon.</div>
+              <div class="form-actions end"><button type="button" class="btn btn-primary" id="toDetails">Continue to details →</button></div>
+            </div>
+            <div class="booking-step" data-step="2">
+              <h2>Tell us about yourself</h2><p class="muted">We’ll use these details to identify your appointment.</p>
+              <label for="customerName">Full name <span class="required">*</span></label><input id="customerName" type="text" placeholder="e.g. Maria Santos" autocomplete="name" required />
+              <div class="form-row"><div><label for="phone">Contact number <span class="required">*</span></label><input id="phone" type="tel" placeholder="e.g. 09XX XXX XXXX" autocomplete="tel" required /></div><div><label for="email">Email (optional)</label><input id="email" type="email" placeholder="you@example.com" autocomplete="email" /></div></div>
+              <label for="notes">Notes for the stylist (optional)</label><textarea id="notes" rows="3" placeholder="Anything you'd like us to know?"></textarea>
+              <div class="form-actions"><button type="button" class="btn btn-light" data-back-step="1">← Back</button><button type="button" class="btn btn-primary" id="toReview">Review appointment →</button></div>
+            </div>
+            <div class="booking-step" data-step="3">
+              <h2>Review your appointment</h2><p class="muted">Please check the details before submitting your request.</p>
+              <div class="review-box" id="reviewBox"></div>
+              <div class="inline-tip">Please make sure your contact number is correct. This is a demonstration prototype and does not send a real booking to the salon.</div>
+              <div class="form-actions"><button type="button" class="btn btn-light" data-back-step="2">← Edit details</button><button type="submit" class="btn btn-primary">Confirm appointment ✓</button></div>
+            </div>
+            <div id="formError" class="form-error" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+        <aside class="booking-aside"><div class="aside-art">✿</div><span class="eyebrow">YOUR VISIT, MADE SIMPLE</span><h3>One less thing to worry about.</h3><p>Choose a service, select a preferred time, and review your information before confirming.</p><div class="aside-detail"><span>✦</span><div><strong>Easy scheduling</strong><small>Keep your preferred visit details together.</small></div></div><div class="aside-detail"><span>♡</span><div><strong>Your details, clearly shown</strong><small>Review your information before submitting.</small></div></div></aside>
+      </div>
+    </section>
+
+    <section class="page" id="page-confirmation">
+      <div class="confirmation-wrap">
+        <div class="success-icon">✓</div><span class="eyebrow">REQUEST RECORDED</span><h1>Thank you, <span id="confirmName">there</span>!</h1><p class="confirmation-lead">Your appointment request has been saved in this prototype.</p>
+        <div class="confirmation-card" id="confirmationDetails"></div>
+        <div class="notice">Demo only: this prototype stores appointments in your current browser. It does not contact the salon or guarantee a real appointment.</div>
+        <div class="hero-actions centered"><button class="btn btn-primary" data-page="home">Back to home</button><button class="btn btn-light" id="bookAnother">Book another appointment</button></div>
+      </div>
+    </section>
+
+    <section class="page" id="page-admin">
+      <div class="page-banner admin-banner"><span class="eyebrow">SALON OPERATIONS</span><h1>Admin dashboard</h1><p>A quick view of appointments and salon supplies.</p><span class="demo-tag">DEMO DATA</span></div>
+      <div class="section-wrap">
+        <div class="stats-grid"><article class="stat-card"><span>Appointments saved</span><strong id="appointmentCount">0</strong><small>In this browser</small></article><article class="stat-card"><span>Products tracked</span><strong id="productCount">5</strong><small>Sample inventory</small></article><article class="stat-card"><span>Low-stock items</span><strong id="lowStockCount">2</strong><small>Needs attention</small></article></div>
+        <div class="admin-grid">
+          <section class="panel"><div class="panel-heading"><div><span class="eyebrow">RECENT BOOKINGS</span><h2>Appointment requests</h2></div><button class="text-link" id="refreshAdmin">Refresh ↻</button></div><div id="appointmentList" class="appointment-list"><div class="empty-state"><span>▦</span><strong>No appointments yet</strong><p>Bookings made through the prototype will appear here.</p></div></div></section>
+          <section class="panel"><div class="panel-heading"><div><span class="eyebrow">STOCK MONITORING</span><h2>Product inventory</h2></div></div><div class="inventory-table-wrap"><table><thead><tr><th>Product</th><th>Stock</th><th>Status</th><th>Update</th></tr></thead><tbody id="inventoryBody"></tbody></table></div><p class="table-note">Low stock is defined as 5 units or fewer in this demo.</p></section>
+        </div>
+        <div class="notice">This dashboard is a front-end demonstration. A real salon system would need secure login, a database, and server-side appointment/stock management.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer global-footer"><span>© 2026 Sondy Sam Hair Salon</span><span>HCI High-Fidelity Prototype · Option B</span></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
